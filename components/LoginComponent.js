@@ -113,7 +113,7 @@ class RegisterTab extends Component {
 
 	getImageFromCamera = async () => {
 		const cameraPermission = await Permissions.askAsync(Permissions.CAMERA);
-		const cameraRollPermission = await Permissions.askAsync(Permissions.MEDIA_LIBRARY); //or CAMERA_ROLL
+		const cameraRollPermission = await Permissions.askAsync(Permissions.MEDIA_LIBRARY); //or CAMERA_ROLL (deprecated) instead of MEDIA LIBRARY
 
 		if (cameraPermission.status === 'granted' && cameraRollPermission.status === 'granted') {
 			const capturedImage = await ImagePicker.launchCameraAsync({
